@@ -1,19 +1,11 @@
-# 0001.app
+# cube-ui-demo-app
 
-## Project setup
-```
-npm install
-```
+## github地址
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## 
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+```
+vue create app
+vue add cube-ui
+```
