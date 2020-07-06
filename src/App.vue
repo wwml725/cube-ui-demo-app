@@ -33,6 +33,10 @@
             'shortcut': 'Basic1',
             'items': [
               {
+                path: '/test',
+                text: 'Test'
+              },
+              {
                 path: '/button',
                 text: 'Button'
               },

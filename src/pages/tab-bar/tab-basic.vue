@@ -7,6 +7,7 @@
 
                 </cube-tab>
             </cube-tab-bar>
+
             <cube-tab-panels v-model="selectedLabel">
                 <cube-tab-panel v-for="(item, index) in tabs" :label="item.label" :key="item.label">
                     <ul>

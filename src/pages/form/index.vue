@@ -1,11 +1,12 @@
 <template>
-  <cube-page type="tabs" title="Tab Demos">
+  <cube-page type="form" title="Form">
     <div slot="content">
       <cube-button-group>
-        <cube-button @click="goTo('tab-bar')">TabBar Demos</cube-button>
-        <cube-button @click="goTo('tab')">Tab Demos</cube-button>
-        <cube-button @click="goTo('scroll-tab')">ScrollTab Demo</cube-button>
-        <cube-button @click="goTo('scroll-tab2')">ScrollTab Demo</cube-button>
+        <cube-button @click="goTo('default')">Default</cube-button>
+        <cube-button @click="goTo('custom')">Custom</cube-button>
+        <cube-button @click="goTo('classic')">Classic style</cube-button>
+        <cube-button @click="goTo('fresh')">Fresh style</cube-button>
+        <cube-button @click="goTo('questionnaire')">Questionnaire</cube-button>
       </cube-button-group>
       <cube-view></cube-view>
     </div>
@@ -25,8 +26,11 @@
     },
     methods: {
       goTo(subPath) {
-        this.$router.push('/tab-bar/' + subPath)
+        this.$router.push('/form/' + subPath)
       }
     }
   }
 </script>
+
+<style lang="stylus" rel="stylesheet/stylus">
+</style>

@@ -1,44 +1,84 @@
 <template>
-  <cube-page type="tip-view" title="Tip">
-    <div slot="content">
+  <cube-page type="tip-view" title="tip">
+    <template slot="content">
       <p class="tip-eg">
         <cube-button
-          :inline="true"
-          :outline="true"
-          :primary="true"
-          @click="$refs.tip.show()">Show tip</cube-button>
-        <cube-tip ref="tip" direction="bottom" style="left:115px;top:-50px;">Tip</cube-tip>
+                :inline="true"
+                :outline="true"
+                :primary="true"
+                @click="$refs.tip.show()"
+        >Show Tip
+        </cube-button>
+        <cube-tip ref="tip" direction="bottom" style="left:115px;top:-50px">tip</cube-tip>
       </p>
       <p class="tip-eg">
         <cube-button
-            :inline="true"
-            :outline="true"
-            :primary="true"
-            @click="showTip('bottom')">cube-ui</cube-button>
+                :inline="true"
+                :outline="true"
+                :primary="true"
+                @click="$refs.tip2.show()"
+        >Show Tip
+        </cube-button>
+        <cube-tip ref="tip2" direction="top" style="left:115px;top:40px">tip</cube-tip>
+      </p>
+      <p class="tip-eg">
+        <cube-button
+                :inline="true"
+                :outline="true"
+                :primary="true"
+                @click="$refs.tip3.show()"
+        >Show Tip
+        </cube-button>
+        <cube-tip ref="tip3" direction="left" style="left:195px;top:-5px">tip</cube-tip>
+      </p>
+      <p class="tip-eg">
+        <cube-button
+                :inline="true"
+                :outline="true"
+                :primary="true"
+                @click="$refs.tip4.show()"
+        >Show Tip
+        </cube-button>
+        <cube-tip ref="tip4" direction="right" style="left:35px;top:-5px">tip</cube-tip>
+      </p>
+
+
+
+      <p class="tip-eg">
+        <cube-button
+                :inline="true"
+                :outline="true"
+                :primary="true"
+                @click="showTip('bottom')">cube-ui</cube-button>
         <cube-tip
-            ref="tip2"
-            :direction="direction"
-            :style="tipStyle"
-            @close="close"
-            @click="clickHandler">
+                ref="tip5"
+                :direction="direction"
+                :style="tipStyle"
+                @close="close"
+                @click="clickHandler">
           <div>Awesome!</div>
         </cube-tip>
       </p>
-      <cube-button @click="showTip('bottom')">top</cube-button>
-      <cube-button @click="showTip('top')">bottom</cube-button>
-      <cube-button @click="showTip('right')">left</cube-button>
-      <cube-button @click="showTip('left')">right</cube-button>
-    </div>
+      <cube-button-group>
+        <cube-button @click="showTip('bottom')">top</cube-button>
+        <cube-button @click="showTip('top')">bottom</cube-button>
+        <cube-button @click="showTip('right')">left</cube-button>
+        <cube-button @click="showTip('left')">right</cube-button>
+      </cube-button-group>
+    </template>
   </cube-page>
 </template>
 
-<script type="text/ecmascript-6">
-  import CubeButtonGroup from '../components/cube-button-group.vue'
-  import CubePage from '../components/cube-page.vue'
+<script>
+  import cubePage from "components/cube-page.vue"
+  import CubeButtonGroup from 'components/cube-button-group.vue'
+
 
   export default {
+    name: "test",
     data() {
       return {
+        msg: "hello",
         direction: '',
         tipStyle: ''
       }
@@ -46,7 +86,7 @@
     methods: {
       showTip(direction) {
         this.direction = direction
-        this.$refs.tip2.show()
+        this.$refs.tip5.show()
 
         switch (direction) {
           case 'bottom':
@@ -63,27 +103,22 @@
             break
         }
       },
-      close() {
-        console.log('click close button')
-      },
-      clickHandler() {
-        console.log('click tip area')
-      }
+
     },
     components: {
-      CubeButtonGroup,
-      CubePage
+      cubePage,CubeButtonGroup
     }
   }
 </script>
 
-<style lang="stylus" rel="stylesheet/stylus">
+<style lang="stylus" scoped>
   .tip-view
     .tip-eg
       position: relative
       width: 300px
       margin: 70px auto
       text-align: center
+
     .cube-btn
       margin-bottom: 10px
 </style>

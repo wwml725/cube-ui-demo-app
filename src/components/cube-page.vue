@@ -6,9 +6,9 @@
             <i @click="back" class="cubeic-back"></i>
         </header>
         <div class="wrapper">
-            <section v-show="desc" class="desc">
-                <slot name="desc">{{desc}}</slot>
-            </section>
+            <!--<section v-show="desc" class="desc">-->
+                <!--<slot name="desc">{{desc}}</slot>-->
+            <!--</section>-->
             <!---->
             <main class="content">
                 <slot name="content">{{content}}</slot>
@@ -29,6 +29,7 @@
                 type: String,
                 default: ''
             },
+            //下面的两个属性暂时没什么用处
             desc: {
                 type: String,
                 default: ''
@@ -65,6 +66,7 @@
             text-align: center
             background-color: #edf0f4
             box-shadow: 0 1px 6px #ccc
+            /*使元素背面不可见背面*//*就目前来说 还没什么用处*/
             -webkit-backface-visibility: hidden
             backface-visibility: hidden
             z-index: 5
@@ -96,8 +98,8 @@
             .content
                 margin: 10px
 
-        /*下面是为某一些子组件比如scroll-default组件使用*/
-
+        /*下面是为某一些子组件比如scroll-default  比如input组件使用*/
+        /*前几个页面没有使用到下面的css样式*/
         &.option-demo
             .wrapper
                 background-color: $color-white
@@ -116,7 +118,7 @@
             .option-list
                 .group
                     margin-bottom: 15px
-                    border: 1px solid rgba(0, 0, 0, .1)
+                    border: 1px solid rgba(0, 0, 0, 1)
                     border-radius: $radius-size-medium
 
                 .item

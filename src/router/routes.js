@@ -1,3 +1,4 @@
+import Test from '../pages/test.vue'
 import Button from '../pages/button.vue'
 import Loading from '../pages/loading.vue'
 import Tip from '../pages/tip.vue'
@@ -8,29 +9,30 @@ import TabBar from '../pages/tab-bar/tab-bar.vue'
 import TabBasic from '../pages/tab-bar/tab-basic.vue'
 import TabComposite from '../pages/tab-bar/tab-composite.vue'
 import ScrollTab from '../pages/tab-bar/scroll-tab.vue'
+import ScrollTab2 from '../pages/tab-bar/scroll-tab2.vue'
 
 
-// import Checkbox from '../pages/checkbox.vue'
-// import CheckboxGroup from '../pages/checkbox-group.vue'
-// import Radio from '../pages/radio.vue'
-// import Switch from '../pages/switch.vue'
-// import Popup from '../pages/popup.vue'
-// import Toast from '../pages/toast.vue'
-// import Input from '../pages/input.vue'
-// import Textarea from '../pages/textarea.vue'
-// import Rate from '../pages/rate.vue'
-// import Form from '../pages/form/index.vue'
-// import FormDefault from '../pages/form/default.vue'
-// import FormCustom from '../pages/form/custom.vue'
-// import FormClassic from '../pages/form/classic.vue'
-// import FormFresh from '../pages/form/fresh.vue'
+import Checkbox from '../pages/checkbox.vue'
+import CheckboxGroup from '../pages/checkbox-group.vue'
+import Radio from '../pages/radio.vue'
+import Switch from '../pages/switch.vue'
+import Popup from '../pages/popup.vue'
+import Toast from '../pages/toast.vue'
+import Input from '../pages/input.vue'
+import Textarea from '../pages/textarea.vue'
+import Rate from '../pages/rate.vue'
+import Form from '../pages/form/index.vue'
+import FormDefault from '../pages/form/default.vue'
+import FormCustom from '../pages/form/custom.vue'
+import FormClassic from '../pages/form/classic.vue'
+import FormFresh from '../pages/form/fresh.vue'
 // import Questionnaire from '../pages/form/questionnaire.vue'
-// import Picker from '../pages/picker.vue'
+import Picker from '../pages/picker.vue'
 // import CascadePicker from '../pages/cascade-picker.vue'
 // import SegmentPicker from '../pages/segment-picker.vue'
 // import DatePicker from '../pages/date-picker.vue'
 // import TimePicker from '../pages/time-picker.vue'
-// import Select from '../pages/select.vue'
+import Select from '../pages/select.vue'
 // import Dialog from '../pages/dialog.vue'
 // import ActionSheet from '../pages/action-sheet.vue'
 import Scroll from '../pages/scroll/index.vue'
@@ -47,10 +49,10 @@ import IndexListDefault from '../pages/index-list/default.vue'
 import IndexListCustom from '../pages/index-list/custom.vue'
 import IndexListPullUpLoad from '../pages/index-list/pull-up-load.vue'
 import IndexListPullDownRefresh from '../pages/index-list/pull-down-refresh.vue'
-// import Upload from '../pages/upload/index.vue'
-// import UploadDefault from '../pages/upload/default.vue'
-// import UploadCompress from '../pages/upload/compress.vue'
-// import UploadCustom from '../pages/upload/custom.vue'
+import Upload from '../pages/upload/index.vue'
+import UploadDefault from '../pages/upload/default.vue'
+import UploadCompress from '../pages/upload/compress.vue'
+import UploadCustom from '../pages/upload/custom.vue'
 // import Validator from '../pages/validator.vue'
 import Swipe from '../pages/swipe/index.vue'
 import SwipeDefault from '../pages/swipe/default.vue'
@@ -72,12 +74,16 @@ import ScrollNavSide from '../pages/scroll-nav/side.vue'
 // import ImagePreviewIndex from '../pages/image-preview/index.vue'
 // import MultiImagesPreview from '../pages/image-preview/multi-images-preview.vue'
 
-// import Checker from '../pages/checker.vue'
+import Checker from '../pages/checker.vue'
 import RecycleList from '../pages/recycle-list/index.vue'
 import RecycleListDefault from '../pages/recycle-list/recycle-list-default.vue'
 import RecycleListTombstone from '../pages/recycle-list/recycle-list-tombstone.vue'
 
 const routes = [
+  {
+    path: '/test',
+    component: Test
+  },
   {
     path: '/button',
     component: Button
@@ -107,6 +113,9 @@ const routes = [
       {
         path: 'scroll-tab',
         component: ScrollTab
+      }, {
+        path: 'scroll-tab2',
+        component: ScrollTab2
       },
       {
         path: 'tab',
@@ -123,79 +132,79 @@ const routes = [
     ]
   },
 
-  // {
-  //   path: '/checkbox',
-  //   component: Checkbox
-  // },
-  // {
-  //   path: '/checkbox-group',
-  //   component: CheckboxGroup
-  // },
-  // {
-  //   path: '/checker',
-  //   component: Checker
-  // },
-  // {
-  //   path: '/radio',
-  //   component: Radio
-  // },
-  // {
-  //   path: '/input',
-  //   component: Input
-  // },
-  // {
-  //   path: '/textarea',
-  //   component: Textarea
-  // },
-  // {
-  //   path: '/switch',
-  //   component: Switch
-  // },
-  // {
-  //   path: '/form',
-  //   component: Form,
-  //   children: [
-  //     {
-  //       path: 'default',
-  //       component: FormDefault
-  //     },
-  //     {
-  //       path: 'custom',
-  //       component: FormCustom
-  //     },
-  //     {
-  //       path: 'classic',
-  //       component: FormClassic
-  //     },
-  //     {
-  //       path: 'fresh',
-  //       component: FormFresh
-  //     },
-  //     {
-  //       path: 'questionnaire',
-  //       component: Questionnaire
-  //     }
-  //   ]
-  // },
+  {
+    path: '/checkbox',
+    component: Checkbox
+  },
+  {
+    path: '/checkbox-group',
+    component: CheckboxGroup
+  },
+  {
+    path: '/checker',
+    component: Checker
+  },
+  {
+    path: '/radio',
+    component: Radio
+  },
+  {
+    path: '/input',
+    component: Input
+  },
+  {
+    path: '/textarea',
+    component: Textarea
+  },
+  {
+    path: '/switch',
+    component: Switch
+  },
+  {
+    path: '/form',
+    component: Form,
+    children: [
+      {
+        path: 'default',
+        component: FormDefault
+      },
+      {
+        path: 'custom',
+        component: FormCustom
+      },
+      {
+        path: 'classic',
+        component: FormClassic
+      },
+      {
+        path: 'fresh',
+        component: FormFresh
+      },
+      // {
+      //   path: 'questionnaire',
+      //   component: Questionnaire
+      // }
+    ]
+  },
 
 
 
-  // {
-  //   path: '/popup',
-  //   component: Popup
-  // },
-  // {
-  //   path: '/toast',
-  //   component: Toast
-  // },
-  // {
-  //   path: '/rate',
-  //   component: Rate
-  // },
-  // {
-  //   path: '/picker',
-  //   component: Picker
-  // },
+  {
+    path: '/popup',
+    component: Popup
+  },
+  {
+    path: '/toast',
+    component: Toast
+  },
+  {
+    path: '/rate',
+    component: Rate
+  },
+  {
+    path: '/picker',
+    component: Picker
+  },
   // {
   //   path: '/cascade-picker',
   //   component: CascadePicker
@@ -212,10 +221,10 @@ const routes = [
   //   path: '/time-picker',
   //   component: TimePicker
   // },
-  // {
-  //   path: '/select',
-  //   component: Select
-  // },
+  {
+    path: '/select',
+    component: Select
+  },
   // {
   //   path: '/dialog',
   //   component: Dialog
@@ -308,24 +317,24 @@ const routes = [
       }
     ]
   },
-  // {
-  //   path: '/upload',
-  //   component: Upload,
-  //   children: [
-  //     {
-  //       path: 'default',
-  //       component: UploadDefault
-  //     },
-  //     {
-  //       path: 'compress',
-  //       component: UploadCompress
-  //     },
-  //     {
-  //       path: 'custom',
-  //       component: UploadCustom
-  //     }
-  //   ]
-  // },
+  {
+    path: '/upload',
+    component: Upload,
+    children: [
+      {
+        path: 'default',
+        component: UploadDefault
+      },
+      {
+        path: 'compress',
+        component: UploadCompress
+      },
+      {
+        path: 'custom',
+        component: UploadCustom
+      }
+    ]
+  },
   // {
   //   path: '/validator',
   //   component: Validator

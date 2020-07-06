@@ -82,23 +82,7 @@
         }
     }
 </script>
-<style lang="stylus" rel="stylesheet/stylus">
-    .cube-tab-bar
-        flex-wrap: wrap
-
-        .cube-tab
-            width: 100%
-            flex-basis: unset
-            height: 40px
-            line-height: 40px
-            font-size: 14px
-            color: #db8931
-            transition: all .3s ease-in
-
-            &.cube-tab_active
-                color: #fff
-                font-size: 16px
-                background-color: #a74b00
+<style lang="stylus" rel="stylesheet/stylus" scoped>
 
     .left-panel
         position: absolute
@@ -107,6 +91,25 @@
         bottom: 0
         width: 80px
         background-color: #2d2d2d
+
+        >>>.cube-scroll-list-wrapper
+            .cube-tab-bar
+                flex-wrap: wrap
+
+                .cube-tab
+                    width: 100%
+                    flex-basis: unset
+                    height: 40px
+                    line-height: 40px
+                    font-size: 14px
+                    color: #db8931
+                    transition: all .3s ease-in
+
+                    &.cube-tab_active
+                        color: #fff
+                        font-size: 16px
+                        background-color: #a74b00
+
 
     .right-panel
         position: absolute
@@ -132,3 +135,4 @@
             span
                 color: #db8931
 </style>
+

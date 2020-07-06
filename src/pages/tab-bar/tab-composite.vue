@@ -7,6 +7,8 @@
                     ref="tabNav"
                     :data="tabLabels">
       </cube-tab-bar>
+
+
       <div class="tab-slide-container">
         <cube-slide
           ref="slide"
